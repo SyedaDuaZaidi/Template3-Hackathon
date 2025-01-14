@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { productDetails } from "../productsDetail/page";
+import  productDetails  from '../productsDetail/page';
 import { FaSliders ,FaAngleDown ,FaAngleUp} from "react-icons/fa6"; 
 export default function allProduct(){
       return(
@@ -125,7 +125,7 @@ export default function allProduct(){
            </div>  
            
           <div className="ml-[300px] w-[1000px] h-[540px] grid grid-cols-3 gap-4">
-                        {productDetails.slice(7,16).map((item) =>{
+                        {Array.isArray(productDetails) && productDetails.slice(7,16).map((item:any) =>{
                          return(
                              <div key={item.id} className="w-full h-auto">
                                <Image src={item.image}

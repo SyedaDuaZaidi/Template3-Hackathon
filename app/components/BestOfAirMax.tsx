@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link"
-import { productDetails} from "../productsDetail/page"
+import  productDetails  from "../productsDetail/page"
 export default function BestOfAirMax(){
-    return(<div>
+    return(
+    <div>
         <div className=" w-[1340] h-[604.36px]">
             <div className="flex gap-[900px] h-[52px] mt-16">
               <div>
@@ -26,7 +27,7 @@ export default function BestOfAirMax(){
                     </div>  
                
                     <div className="flex gap-4 h-[540px] mt-14 -ml-[1260px]">
-            {productDetails.slice(0,3).map((item) =>{
+            {Array.isArray(productDetails) && productDetails.slice(0,3).map((item) =>{
              return(
                  <div key={item.id} className="h-[510.36px]">
                    <Image src={item.image}alt="{item.title}"

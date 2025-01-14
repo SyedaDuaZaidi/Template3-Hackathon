@@ -1,7 +1,7 @@
 import Image from "next/image";
-import React from "react";
+import React from 'react';
 import Link from "next/link"
-export const productDetails = [
+ const productDetails = [
   {
       id: 1,
       title: "Nike Air Max Pulse",
@@ -148,7 +148,7 @@ export const productDetails = [
                     <li key={product.id}>
                         <h2>{product.title}</h2>
                         <p>{product.description}</p>
-                        <Image src={product.image} alt="{product.title}"/>
+                        <Image src={product.image} alt="product.title"/>
                         <p>{product.price}</p>
                         <Link href={`/productDetail/${product.id}`}>View Details</Link>
                     </li>

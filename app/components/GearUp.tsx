@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { productDetails } from "../productsDetail/page"
+import  productDetails  from "../productsDetail/page"
 export default function gearUp(){
   return(
         <div>
@@ -39,7 +39,7 @@ export default function gearUp(){
          </div></div>
          
          <div className="flex gap-3 h-[540px] mt-14 -ml-[1180px]">
-            {productDetails.slice(3 , 7).map((item) =>{
+            {Array.isArray(productDetails) && productDetails.slice(3 , 7).map((item) =>{
              return(
                  <div key={item.id} className="h-[510.36px]">
                    <Image src={item.image}
